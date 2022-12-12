@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+    background-color: #e9e9e9;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+li{
+    list-style: none;
+    width: max-content;
+    padding: 10px 15px;
+}
+a{
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+    font-weight: bold;
+}
+.menu{
+    background-color: black;
+    display: flex;
+}
+.menu ul{
+    display:flex;
+    justify-content: center;
+    margin-right: 10%;
+    padding: 0;
+    margin: 10px;
+    width: 80%;
+    
+}
+.menu #logo{
+    margin: 0 10px;
+    align-items: center;
+    color: white;
+    font-weight: 25px;
+}
+#logo h2{
+    margin: 10px 30px;
+    font-size: 25px;
+}
+.menu #a li:hover{
+    border-radius: 2px;
+    transition: 0.2s ease-in-out;
+    background-color: rgb(120, 120, 120);
+}
+#more{
+    color: white;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.box1{
+    width: 80%;
+    height: 420px;
+    background: url(./img/img4.png);
+    animation: example 10s infinite ease-in-out alternate;
+    transition: 2s;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+@keyframes example{
+    0% {background: url(./img/img4.png);}
+    25% {background: url(./img/img5.png);}
+    50% {background: url(./img/img6.png);}
+    75% {background: url(./img/img7.png);}
+    100% {background: url(./img/img4.png);}
+}
+.box {
+    display: inline-flex;
+    box-sizing: border-box;
+}
+.box img{
+    width: 100%;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+.box div{
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+h1{
+    width: 100%;
+    text-align: center;
+}
+
+.box2 {
+    display: inline-flex;
+}
+.box2 img{
+    width: 100%;
+    border-radius: 10px;
+}
+.box2 div{
+    margin: 10px;
+}
+
+.box #img:hover{
+    box-shadow:gray 2px 2px 10px 2px;
+    transition: 0.2s ease-in-out;
+}
+.box input{
+
+    opacity: 0;
+    font-size:15px;
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    padding: 0 10px;
+    font-weight: bolder;
+    
+}
+.box div:hover input{
+    opacity: 1;
+    
+}
+.box div input:hover{
+    color: red;
+    transform: scale(1.2);
+    border: 1px solid red;
+    
+}
+.box #btn{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.all{
+    text-align: center;
+}
+.all input{
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid blue;
+    color: blue;
+}
+.all input:hover{
+    background-color: blue;
+    color: white;
+}
+h2 a{
+    font-size: 25px;
+}
+#bgriPhone{
+    background-color: rgb(120, 120, 120);
+}
+
+</style>
+<body>
+    <div id="iPhone">
+        <div class="menu">
+            <ul id="logo">
+                <h2><i class="fa fa-mobile-phone" aria-hidden="true"></i><a href="./index.html#home">TT Apple</a></h2>
+            </ul>
+            <ul id="a">
+                <li id="bgriPhone"><a href="" >iPhone</a></li>
+                <li><a href="./iPad.html#iPad">iPad</a></li>
+                <li><a href="./Mac.html#Mac">Mac</a></li>
+                <li><a href="">Watch</a></li>
+                <li><a href="">Âm thanh</a></li>
+                <li><a href="">Phụ kiện</a></li>
+                <li><a href="">Dịch vụ</a></li>
+                <li><a href="">Khuyến mãi</a></li>
+                <li><a href="">Trả Góp</a></li>
+            </ul>
+            <ul id="more">
+                <li><i class="fa fa-search" aria-hidden="true"></i></li>
+                <li><i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+        <h1>iPhone</h1>
+        <div class="container">
+        <div class="box1"></div>
+        
+        <div class="box">
+            <div id="img"><img src="./img/ip14_1.jpg" alt="">
+                <div id="btn"><input type="button" value="Mua Ngay"></div>
+                <h3>iPhone 14 Pro Max 128GB</h3>
+                <h4>Giá từ: 31.950.000đ</h4>
+            </div>
+            <div id="img"><img src="./img/ip14_2.jpg" alt="">
+                <div id="btn"><input type="button" value="Mua Ngay"></div>
+                <h3>iPhone 14 Pro 128GB</h3>
+                <h4>Giá từ: 28.950.000đ</h4>    
+            </div>
+            <div id="img"><img src="./img/ip14_3.jpg" alt="">
+                <div id="btn"><input type="button" value="Mua Ngay"></div>
+                <h3>iPhone 14 Plus 128GB</h3>
+                <h4>Giá từ: 22.990.000đ</h4>    
+            </div>
+            <div id="img"><img src="./img/ip14_4.jpg" alt="">
+                <div id="btn"><input type="button" value="Mua Ngay"></div>
+                <h3>iPhone 14 128GB</h3>
+                <h4>Giá từ: 20.990.000đ</h4> 
+            </div>
+        </div>
+
+        <div class="box">
+            <div id="img"><img src="./img/ip14_5.jpg" alt="">
+                <div id="btn"><input type="button" value="Mua Ngay"></div>
+                <h3>iPhone 14 Pro Max 128GB</h3>
+                <h4>Giá từ: 31.950.000đ</h4>
+            </div>
+            <div id="img"><img src="./img/ip14_6.jpg" alt="">
+                <div id="btn"><input type="button" value="Mua Ngay"></div>
+                <h3>iPhone 14 Pro 128GB</h3>
+                <h4>Giá từ: 28.950.000đ</h4>    
+            </div>
+            <div id="img"><img src="./img/ip14_7.jpg" alt="">
+                <div id="btn"><input type="button" value="Mua Ngay"></div>
+                <h3>iPhone 14 Plus 128GB</h3>
+                <h4>Giá từ: 22.990.000đ</h4>    
+            </div>
+            <div id="img"><img src="./img/ip14_7.jpg" alt="">
+                <div id="btn"><input type="button" value="Mua Ngay"></div>
+                <h3>iPhone 14 128GB</h3>
+                <h4>Giá từ: 20.990.000đ</h4> 
+            </div>
+        </div>
+        
+        <div class="box">
+            <div id="img"><img src="./img/ip14_1.jpg" alt="">
+                <div id="btn"><input type="button" value="Mua Ngay"></div>
+                <h3>iPhone 14 Pro Max 128GB</h3>
+                <h4>Giá từ: 31.950.000đ</h4>
+            </div>
+            <div id="img"><img src="./img/ip14_2.jpg" alt="">
+                <div id="btn"><input type="button" value="Mua Ngay"></div>
+                <h3>iPhone 14 Pro 128GB</h3>
+                <h4>Giá từ: 28.950.000đ</h4>    
+            </div>
+            <div id="img"><img src="./img/ip14_3.jpg" alt="">
+                <div id="btn"><input type="button" value="Mua Ngay"></div>
+                <h3>iPhone 14 Plus 128GB</h3>
+                <h4>Giá từ: 22.990.000đ</h4>    
+            </div>
+            <div id="img"><img src="./img/ip14_4.jpg" alt="">
+                <div id="btn"><input type="button" value="Mua Ngay"></div>
+                <h3>iPhone 14 128GB</h3>
+                <h4>Giá từ: 20.990.000đ</h4> 
+            </div>
+        </div>
+
+        <div class="cart">
+            <h2>CART</h2>
+            <form action="">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                            <th>Chọn</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="display:flex;align-items: center;"><img style="width: 70px;" src="./img/ip13_1.jpg" alt="">iphone 14</td>
+                            <td><p><span>31.950.000</span><sup>đ</sup></p></td>
+                            <td><input style="width: 30px;outline: none;" type="number" name="" id="" value="1" min="0"></td>
+                            <td>Xóa</td>
+                        </tr>
+                        <tr>
+                            <td style="display:flex;align-items: center;"><img style="width: 70px;" src="./img/ip13_1.jpg" alt="">iphone 14</td>
+                            <td><p><span>31.950.000</span><sup>đ</sup></p></td>
+                            <td><input style="width: 30px;outline: none;" type="number" name="" id="" value="1" min="0"></td>
+                            <td>Xóa</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="price-total" style="text-align: right; margin-right: 10px;">
+                    <p style="font-weight:bold ;">Tổng tiền<span>31.950.000</span><sup>đ</sup></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
