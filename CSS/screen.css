@@ -1,0 +1,127 @@
+@media screen and ( max-width: 870px){
+    .container{margin: auto;}
+    .box2{
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .cards{ --spacing:0;}
+    .card
+    {
+    --spacing:5px;
+    --column:2;
+    margin-left: 0;
+    }
+    .card-img img{width: 60%;}
+    .card-title{
+        margin: 0;
+        text-align: center;
+    }
+    .card-bottom{
+        flex-direction: column;
+    }
+    .card-price{
+        font-size: 17px !important;
+       padding-bottom: 10px;
+    }
+    
+    .menu{display: block;}
+    .fa-bars{display: block !important;}
+    .menu .a{
+        flex-direction: column;
+    }
+    .menu .open-list {
+        background-color: coral;
+        display: none;  
+    }
+    .menu .cart-icon {
+       float: right;
+       text-align: right;
+       top: 100px;
+       right: 1%;
+       position: absolute;
+    }
+
+    .active{
+        display: flex !important;
+        flex-direction: column;
+        width: 300px;
+        height: 500px;
+        right: 0;
+        position: absolute;
+        transition: all 1s ease;
+    }
+    .menu .open-list .a{
+        margin-left: 70%;
+        transform: translate(-50%);
+        width: 150px;
+    }
+    /* hover */
+    .menu .a li:hover{
+        background-color: rgb(244, 53, 110);
+        width: 100%;
+        transition: 0.5s;
+        color: #fff;
+        border-radius: 10px;
+    }
+    .footer{
+        display: none;
+    }
+   
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1150px) and ( min-width: 871px){
+    .container{margin: auto;}
+    .cards{margin: 0;}
+    .card{--column:3;}
+    .card-img img{width: 70%;}
+
+    
+     
+    .menu{display: block;}
+    .fa-bars{display: block !important;}
+    .menu .a{
+        flex-direction: column;
+    }
+    .menu .open-list {
+        background-color: coral;
+        text-align: right;
+        display: none;  
+    }
+    .menu .cart-icon {
+       float: right;
+       top: 45px;
+       right: 6%;
+       position: absolute;
+    }
+
+    .active{
+        display: flex !important;
+        flex-direction: column;
+        width: 300px;
+        height: 500px;
+        right: 0;
+        position: absolute;
+        transition: all 1s ease;
+    }
+    .menu .open-list .a{
+        margin-left: 70%;
+        transform: translate(-50%);
+        width: 150px;
+    }
+    /* hover */
+    .menu .a li:hover{
+        background-color: rgb(244, 53, 110);
+        width: 100%;
+        transition: 0.5s;
+        color: #fff;
+        border-radius: 10px;
+    }
+}
+
