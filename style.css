@@ -327,6 +327,7 @@ h4{
         color: #fff;
         border-radius: 10px;
     }
+    .footer{display:none;}
    
 }
 @media screen and (max-width: 1150px) and ( min-width: 871px){
