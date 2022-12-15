@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+           box-sizing: border-box;
+           font-family: sans-serif;
+        }
+        body{
+            background-color: rgb(244,45,110);
+            margin: auto;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 12px;
+        }
+        #dangnhap{
+            background-color: #21252a;
+            display: flex;
+            height: 100vh;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+        .content .left{
+            color: #fff;
+            font-size: 35px;
+            width: 50%;
+            /* background-color: aqua; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .content .left a{
+            font-size: 50px;
+        }
+        .content .right{
+            width: 50%;
+            /* background-color: #fff; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content .more{
+            width: 90%;
+            margin-left: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .content .more p{
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+        form input{
+            width: 90%;
+            height: 35px;
+            margin-bottom: 10px;
+            border: 1px solid aqua;
+        }
+        form input:last-child{
+            width: 40%;
+           font-weight: 600;
+        }
+        form label{
+            float: left;
+            margin-left: 20px;
+            text-align: left !important;
+        }
+        form{
+            color: #fff;
+            width: 90%;
+            align-items: center;
+            box-shadow: 0 0 20px aqua;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        form .pwd{
+            position: relative;
+           
+        }
+        span{
+            position: absolute;
+            right: 7%;
+            top: 55%; 
+            transform: translate(-50%,-50%);
+            font-size: 20px;
+            color: #000;
+            
+        }
+        span .fa-eye{
+            display:none;
+        }
+        span i.hide-btn::before{
+            content: " <i class="fa fa-eye-slash" aria-hidden="true"></i>";
+        }
+        @media screen and (max-width:768px){
+            .content .left{
+                display: none;
+            }
+            .content .right{
+                width: 100%;
+            }
+        }
+
+        /* hover */
+        .more a:hover{
+            color: red;
+            font-weight: 600;
+        }
+        form input:last-child:hover{
+            background-color: aqua;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        .content .left div:last-child:hover{
+           padding: 10px 20px;
+           border-radius: 10px;
+           background-color: #fff;
+        }
+        .content .left div:last-child:hover a{
+            color: rgb(244,45,110);
+        }
+    </style>
+</head>
+<body>
+    <div id="dangnhap">
+       <div class="content">
+        <div class="left">
+            <div class="title">
+                <h1>Welcome !</h1>
+            </div>
+            <div><a href="/index.html">TT Apple</a></div>
+        </div>
+        <div class="right">
+            <form action="">
+                <h1>Sign in</h1>
+                <label for="">Username:</label>
+                <input type="text" name="" id="username"><br>
+                <label for="">Password:</label>
+                <div class="pwd">
+                    <input type="password" name="" id="password">
+                    <span><i class="fa fa-eye" aria-hidden="true"></i></span>
+                    <span><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
+                </div>
+                <div class="more">
+                    <p>Forgot Password?</p>
+                    <a href="/HTML/dangky.html">Sign up</a>
+                </div>
+                <input type="submit" value="Login" onclick="Login()">
+            </form>
+        </div>
+       </div>
+    </div>
+    <script>
+        const passField = document.querySelector(".pwd input")
+        const showBtn = document.querySelector("span .fa-eye")
+        const showBtn1 = document.querySelector("span .fa-eye-slash")
+        console.log(passField,showBtn)
+        showBtn.onclick = (()=>{
+        if(passField.type === "password"){
+            passField.type = "text"
+            showBtn.classList.add("hide-btn")
+            document.querySelector("span .fa-eye-slash").style.display="none"
+            document.querySelector("span .fa-eye").style.display="block"
+        }
+        else{
+            passField.type = "password"
+            showBtn.classList.remove("hide-btn")
+            document.querySelector("span .fa-eye").style.display="none"
+            document.querySelector("span .fa-eye-slash").style.display="block"
+        }
+    })
+    showBtn1.onclick = (()=>{
+        if(passField.type === "password"){
+            passField.type = "text"
+            showBtn.classList.add("hide-btn")
+            document.querySelector("span .fa-eye-slash").style.display="none"
+            document.querySelector("span .fa-eye").style.display="block"
+        }
+        else{
+            passField.type = "password"
+            showBtn.classList.remove("hide-btn")
+            document.querySelector("span .fa-eye").style.display="none"
+            document.querySelector("span .fa-eye-slash").style.display="block"
+        }
+    })
+
+    
+    var inputuser = document.getElementById('username');
+    var inputpass = document.getElementById('password');
+        function Login()
+       {
+           var a=inputuser.value
+           var b=inputpass.value
+           
+           if(a=="admin" && b=="admin1") 
+           alert("Bạn đã đăng nhập thành công");
+
+           else if(a=="" && b=="")
+           alert("Vui lòng nhập thông tin!");
+
+           else alert("Thông tin tài khoản chưa chính xác!");  
+        }
+    </script>
+</body>
+</html>

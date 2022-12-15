@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTV IT</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/giohang.css">
+    <link rel="stylesheet" href="/CSS/card.css">
+    <link rel="stylesheet" href="/CSS/screen.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .information{
+            width: 100%;
+            display: flex;
+            margin-top: 100px;
+        }
+        .information .member{
+            width: 50%;
+            height: 100%;
+            margin: 5px;
+            background-color: #fff;
+            border-radius: 50px;
+            border: 5px ridge rgb(53, 244, 219);
+        }
+        .information .title{
+            display: flex;
+            align-items: center;
+            text-align: center;
+           
+        }
+        .member .img
+        {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid rgb(255, 112, 112);
+            box-shadow: 0 0 20px rgb(255, 50, 50);
+        }
+        .member .ct{
+            padding: 10px;
+        }
+        .content header{
+            display: flex;
+            align-items: center;
+          
+        }
+        .content header .img-member{
+          width: 30px;
+          height: 30px;
+          margin-right: 10px;
+        }
+        .content h1{
+            color: #000;
+            margin-bottom: 0;
+        }
+        .ct{
+            display: flex;
+        }
+        .ct .title{
+            width: 45%;
+            margin: 0;
+        }
+        .ct .content{
+            width: 55%;
+        }
+        .ct .title .img{
+            margin-left: calc(50% - 75px);
+        }
+        .contact{
+            display: flex;
+            margin-top: 10px;
+        }
+        .contact .network{
+            width: 150px;
+            margin: 5px;
+        }
+        .contact .network a{
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+        .contact .ins{
+            background: rgb(252,176,69);
+            background: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgba(131,58,180,1) 100%);
+            padding: 5px;
+            border-radius: 20px;
+        }
+        .contact .fb{
+            background: rgb(38,142,246);
+            background: linear-gradient(45deg, rgba(38,142,246,1) 0%, rgba(0,111,254,1) 67%, rgba(138,185,242,1) 100%);
+            padding: 5px;
+            border-radius: 20px;
+        }
+        .intro h4{
+            margin-bottom: 0;
+        }
+        .intro p{
+           margin: 0;
+        }
+        hr{
+            height: 3px;
+            background-color: #000;
+        }
+        @media screen and (max-width:768px){
+            .information{
+                display: block;
+                margin: auto;
+                width: 80%
+            }
+            .information .member{
+            width: 100%;
+            height: 100%;
+            margin: 5px;
+            }
+            .ct{
+                display: block;
+            }
+        }
+        @media screen and (max-width:1350px){
+            
+            .contact{
+                display: block;
+            }
+            .contact .network{
+                width: 150px;
+            }
+            .ct{
+                display: block;
+            }
+            .ct .title{
+                width: 100%;
+                text-align: center;
+            }
+            .ct .content{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="home">
+        <div class="menu">
+            <h2><i class="fa fa-mobile-phone" aria-hidden="true"></i> <a href="/index.html">TT Apple</a></h2>
+            <div class="open-list">
+                    <ul class="a">
+                        <li><a href="/HTML/iPhone.html">iPhone</a></li>
+                        <li><a href="/HTML/iPad.html">iPad</a></li>
+                        <li><a href="/HTML/mac.html">Mac</a></li>
+                        <li><a href="/HTML/watch.html">Watch</a></li>
+                        <li><a href="/HTML/amthanh.html">Âm thanh</a></li>
+                        <li><a href="/HTML/phukien.html">Phụ kiện</a></li>
+                        <li style="background-color: grey;"><a href="/HTML/gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="/HTML/lienhe.html">Liên hệ</a></li>
+                        <li class="login"><i class="fa fa-user-circle" aria-hidden="true" ></i><a href="./dangnhap.html"> Đăng nhập</a></li>
+                    </ul>
+            </div>
+            <div class="cart-icon"> Giỏ hàng <i class="fa fa-shopping-bag" aria-hidden="true"></i> </div>
+            <i class="fa fa-bars" onclick="open_list()" aria-hidden="true"></i>
+        </div>
+       
+        
+            
+          
+
+           <div class="information">
+            <div class="member member1">
+                <div class="ct left">
+                    <div class="title">
+                        <img src="/Icon/img3.jpg" alt="" class="img">
+                    </div>
+                    <div class="content">
+                        <h1>Hoàng Chí Thanh</h1>
+                        <header>
+                            <img src="/Icon/admin1_icon.png" alt="" class="img-member"><h3>Leader</h3>
+                        </header>
+                           <hr>
+
+                        <div class="intro">
+                            <h4>Class:</h4>
+                            <p>17CSI01</p>
+                            <h4>MSSV:</h4>
+                            <p>21661054</p>
+                            <h4>Email:</h4>
+                            <p>21661054@kthcm.edu.vn</p>
+                            <h4>Birthday:</h4>
+                            <p>2003, 17<sup>th</sup> May</p>
+                            <h4>Jobs:</h4>
+                            <p>Developer / Designer</p>
+                            <div class="contact">
+                                <div class="network fb">
+                                    <a href="https://www.facebook.com/hcthanhhh"><img src="/Icon/facebook _icon.png" alt="" class="img-icon">Facebook</a>
+                                </div>
+                                <div class="network ins">
+                                    <a href="https://www.instagram.com/h_thanhh03/"><img src="/Icon/instagram_icon.png" alt="" class="img-icon">Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+            <div class="member member2">
+                <div class="ct right">
+                    <div class="title">
+                        <img src="/Icon/img2.jpg" alt="" class="img">
+                    </div>
+                    <div class="content">
+                        <h1>Nguyễn Phát Triều</h1>
+                        <header>
+                            <img src="/Icon/person_profile_icon.png" alt="" class="img-member"><h3>Member</h3>
+                        </header>
+                           <hr>
+
+                        <div class="intro">
+                            <h4>Class:</h4>
+                            <p>17CSI01</p>
+                            <h4>MSSV:</h4>
+                            <p>21661006</p>
+                            <h4>Email:</h4>
+                            <p>21661006@kthcm.edu.vn</p>
+                            <h4>Birthday:</h4>
+                            <p>2003, 24<sup>th</sup> February</p>
+                            <h4>Jobs:</h4>
+                            <p>Developer / Designer</p>
+                            <div class="contact">
+                                <div class="network fb">
+                                    <a href="https://www.facebook.com/nguyenphattrieu2003"><img src="/Icon/facebook _icon.png" alt="" class="img-icon">Facebook</a>
+                                </div>
+                                <div class="network ins">
+                                    <a href="https://www.instagram.com/_nguyenphattrieu___/"><img src="/Icon/instagram_icon.png" alt="" class="img-icon">Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+           </div>
+
+    <div class="footer">
+        <div class="ft">
+            <p>TT Apple lấy cảm hứng và đam mê về các đồ công nghệ hiện đại và nhỏ gọn, nhóm em khá hứng thú với các thiết bị của Apple. Vì thế quyết định tạo ra một trang web để có thể tự kiểm soát và cũng như tìm tòi học hỏi ở những trang thương mại điện tử lớn có mặt trên thị trường khác nhau.</p>
+        </div>
+        <div class="ft">
+            <div class="title">Sản phẩm</div>
+            <p>
+                <a href="/HTML/iPhone.html">iPhone</a>
+                <a href="/HTML/iPad.html">iPad</a>
+                <a href="/HTML/mac.html">Mac</a>
+                <a href="/HTML/watch.html">Apple Watch</a>
+                <a href="/HTML/amthanh.html">Âm thanh</a>
+                <a href="/HTML/phukien.html">Phụ kiện</a>
+            </p>
+        </div>
+        <div class="ft">
+            <div class="title">Thông tin</div>
+            <p>
+                <a href="/HTML/gioithieu.html">Giới thiệu</a>
+                <a href="#">Khuyến mại</a>
+                <a href="#">Bảo hành và sửa chữa</a>
+                <a href="#">Tuyển dụng</a>
+                <a href="#">Tin tức</a>
+                <a href="#">Check IMEI</a>
+                <a href="#">Phương thức thanh toán</a>
+                <a href="#">Gửi góp ý, khiếu nại</a>
+                <a href="#">Thuê điểm bán lẻ</a>
+            </p>
+        </div>
+        <div class="ft">
+            <div class="title">Chính sách</div>
+            <p>
+                <a href="#">Trả góp</a>
+                <a href="#">Giao hàng</a>
+                <a href="#">Giao hàng (ZaloPay)</a>
+                <a href="#">Hủy giao dịch</a>
+                <a href="#">Đổi trả</a>
+                <a href="#">Bảo hành</a>
+                <a href="#">Giải quyết khiếu nại</a>
+                <a href="#">Bảo mật thông tin</a>
+              
+            </p>
+        </div>
+        <div class="ft">
+            <div class="title">Địa chỉ</div>
+            <p>
+                <a href="#">Tìm Store trên Google Map</a>
+                <a href="#">Hệ thống cửa hàng</a>
+            </p>
+            <div class="title">Liên hệ</div>
+            <p>
+                <a href="#">Mua hàng: 0000.1724</a>
+                <a href="#">Khiếu nại: 0886.308.000</a>
+                <a href="#">Doanh nghiệp & Đối tác: 0822.688.000</a>
+            </p>
+        </div>
+    </div>
+
+
+  
+</div>
+      
+
+    
+
+      <!-- Giỏ hàng -->
+      <div class="cart">
+        <i class="fa fa-times-circle" aria-hidden="true" style=" float: right; font-size: 25px;"></i>
+        <h2>Giỏ hàng</h2>
+        <form action="">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th class="price4">Giá</th>
+                        <th>Số lượng</th>
+                        <th>Chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td style="display:flex;align-items: center;"><img style="width: 70px;" src="http://127.0.0.1:5500/img/ip3.png" alt=""><span>iPhone 14</span></td>
+                        <td><p><span>31950</span><sup>đ</sup></p></td>
+                        <td><input style="width: 30px;outline: none;" type="number" name="" id="" value="1" min="0"></td>
+                        <td>Xóa</td>
+                    </tr>
+                    <tr>
+                        <td style="display:flex;align-items: center;"><img style="width: 70px;" src="./img/ip2.png" alt=""><span>iPhone 14</span></td>
+                        <td><p><span>31950</span><sup>đ</sup></p></td>
+                        <td><input style="width: 30px;outline: none;" type="number" name="" id="" value="1" min="0"></td>
+                        <td>Xóa</td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <div class="price-total" style="text-align: right; margin-right: 10px;">
+                <p style="font-weight:bold ;">Tổng tiền: <span>0</span><sup>đ</sup></p>
+            </div>
+            <a class="fancy" href="#">
+                <span class="top-key"></span>
+                <button><span class="text">Mua Ngay</span></button>
+                <span class="bottom-key-1"></span>
+                <span class="bottom-key-2"></span>
+              </a>
+        </form>
+    </div>
+</div>
+    <script src="/script.js"></script>
+</body>
+</html>
