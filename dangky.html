@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+           box-sizing: border-box;
+           font-family: sans-serif;
+        }
+        body{
+            background-color: rgb(244,45,110);
+            margin: auto;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 12px;
+        }
+        #dangky{
+            background-color: #21252a;
+            display: flex;
+            height: 100vh;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+        .content .left{
+            color: #fff;
+            font-size: 35px;
+            width: 50%;
+            /* background-color: aqua; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .content .left a{
+            font-size: 50px;
+        }
+        .content .right{
+            width: 50%;
+            /* background-color: #fff; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+        .content .more{
+            width: 90%;
+            margin-left: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .box input{
+            width: 90%;
+            height: 35px;
+            margin-bottom: 10px;
+            border: 1px solid aqua;
+        }
+        .box input:last-child{
+            width: 40%;
+           font-weight: 600;
+        }
+        .box label{
+            float: left;
+            margin-left: 20px;
+            text-align: left !important;
+        }
+        .box{
+            color: #fff;
+            width: 100%;
+            align-items: center;
+            box-shadow: 0 0 20px aqua;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        .box .pwd{
+            position: relative;
+           
+        }
+        span{
+            position: absolute;
+            right: 7%;
+            top: 55%; 
+            transform: translate(-50%,-50%);
+            font-size: 20px;
+            color: #000;
+            
+        }
+        span .fa-eye{
+            display:none;
+        }
+        span i.hide-btn::before{
+            content: " <i class="fa fa-eye-slash" aria-hidden="true"></i>";
+        }
+
+        .sex{
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .sex input[type="radio"]{
+            zoom: 50%;
+        }
+        .sex .gender{
+            width: 45%;
+            height: 40px;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid aqua;
+            border-radius: 20px;
+        }
+
+        .submit{
+            margin-top: 20px;
+        }
+
+
+
+
+        @media screen and (max-width:768px){
+            .content .left{
+                display: none;
+            }
+            .content .right{
+                width: 100%;
+            }
+        }
+
+        /* hover */
+        form input:last-child:hover{
+            background-color: aqua;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        .content .left div:last-child:hover{
+           padding: 10px 20px;
+           border-radius: 10px;
+           background-color: #fff;
+        }
+        .content .left div:last-child:hover a{
+            color: rgb(244,45,110);
+        }
+    </style>
+</head>
+<body>
+    <div id="dangky">
+       <div class="content">
+        <div class="left">
+            <div class="title">
+                <h1>Welcome !</h1>
+            </div>
+            <div><a href="./index.html">TT Apple</a></div>
+        </div>
+        <div class="right">
+            <form action="" class="box">
+                <h1>Sign up</h1>
+                <label for="">Username:</label>
+                <input type="text" name="" id="username"><br>
+                <label for="">Password:</label>
+                <div class="pwd pwd1">
+                    <input type="password" name="" id="password1">
+                    <span class="sp1"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                    <span class="sp1"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
+                </div>
+                <label for="">Confirm Password:</label>
+                <div class="pwd pwd2">
+                    <input type="password" name="" id="password2">
+                    <span class="sp2"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                    <span class="sp2"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
+                </div>
+                <label for="">Sex:</label><br>
+                <div class="sex">
+                    <div class="gender male">
+                        <label for="">Nam</label>
+                        <input type="radio" name="sex">
+                    </div>
+                    <div class="gender famle">
+                        <label for="">Nữ</label>
+                        <input type="radio" name="sex">
+                    </div>
+                </div>
+
+                
+
+               
+                <div class="submit">
+                    <input type="submit" value="Create Account" onclick="Create_Account()">
+                   </div>
+            </form>
+        </div>
+       </div>
+    </div>
+    <script>
+        const passField1 = document.querySelector(".pwd1 input")
+        const showBtn1_1 = document.querySelector(".sp1 .fa-eye")
+        const showBtn1_2 = document.querySelector(".sp1 .fa-eye-slash")
+       
+        showBtn1_1.onclick = (()=>{
+            if(passField1.type === "text"){
+                passField1.type = "password"
+                showBtn1_1.classList.add("hide-btn")
+                document.querySelector(".sp1 .fa-eye-slash").style.display="block"
+                document.querySelector(".sp1 .fa-eye").style.display="none"
+            }
+        })
+        showBtn1_2.onclick = (()=>{
+            if(passField1.type === "password"){
+                passField1.type = "text"
+                showBtn1_1.classList.add("hide-btn")
+                document.querySelector(".sp1 .fa-eye-slash").style.display="none"
+                document.querySelector(".sp1 .fa-eye").style.display="block"
+            }
+        })
+
+        const passField2 = document.querySelector(".pwd2 input")
+        const showBtn2_1 = document.querySelector(".sp2 .fa-eye")
+        const showBtn2_2 = document.querySelector(".sp2 .fa-eye-slash")
+
+        showBtn2_1.onclick = (()=>{
+            if(passField2.type === "text"){
+                passField2.type = "password"
+                showBtn2_1.classList.add("hide-btn")
+                document.querySelector(".sp2 .fa-eye-slash").style.display="block"
+                document.querySelector(".sp2 .fa-eye").style.display="none"
+            }
+        })
+        showBtn2_2.onclick = (()=>{
+            if(passField2.type === "password"){
+                passField2.type = "text"
+                showBtn2_1.classList.add("hide-btn")
+                document.querySelector(".sp2 .fa-eye-slash").style.display="none"
+                document.querySelector(".sp2 .fa-eye").style.display="block"
+            }
+        })
+
+    var inputuser = document.getElementById('username');
+    var inputpass1 = document.getElementById('password1');
+    var inputpass2 = document.getElementById('password2');
+        function Create_Account()
+       {
+           var user=inputuser.value
+           var pwd1=inputpass1.value
+           var pwd2=inputpass2.value
+           
+           if(user=="admin" && pwd1=="admin1" && pwd2=="admin1") 
+           alert("Bạn đã đăng nhập thành công");
+
+           else if(user=="" && pwd1=="" && pwd2=="")
+           alert("Vui lòng nhập thông tin!");
+
+           else if(pwd1!=pwd2)
+           alert("Xác thực mật khẩu chưa chính xác!")
+
+           else alert("Đăng kí không thành công!");  
+        }
+    </script>
+</body>
+</html>
